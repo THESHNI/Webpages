@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>calculator</title>
+    </head>
+    <body>
+        <input type="number" placeholder="Number 1" id="num1">
+        <input type="number" placeholder="Number 2" id="num2">
+        <br><br>
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>
+        <button onclick="calc('/')">/</button><br><br>
+        <input type="text" id="result" readonly>
+        <script>
+            function calc(operator){
+                const n1=parseFloat(document.getElementById("num1").value);
+                const n2=parseFloat(document.getElementById("num2").value);
+                let result;
+                switch(operator){
+                    case '+':result=n1+n2;
+                    break;
+                    case '-':result=n1-n2;
+                    break;
+                    case '*':result=n1*n2;
+                    break;
+                    case '/':result=n1/n2;
+                    break;
+                }
+            
+                document.getElementById("result").value=result;
+            }
+
+            
+        </script>
+
+        
+    </body>
+</html>
